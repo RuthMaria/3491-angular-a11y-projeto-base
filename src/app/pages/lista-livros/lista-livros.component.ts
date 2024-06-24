@@ -8,6 +8,7 @@ import { LivrosResultado, Item } from '../../models/interfaces';
 import { LivroVolumeInfo } from '../../models/livroVolumeInfo';
 import { LivroService } from '../../service/livro.service';
 import { LivroComponent } from '../../componentes/livro/livro.component';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
 
 
 const PAUSA = 300;
@@ -30,7 +31,9 @@ export class ListaLivrosComponent implements AfterViewInit {
   livrosResultado!: LivrosResultado;
   @ViewChild('campoBuscaElement') campoBuscaElement!: ElementRef; // criamos uma referência ao elemento do DOM para podermos aplicar o foco
 
-  constructor(private service: LivroService) { }
+  constructor(
+    private service: LivroService,
+    private liveAnnouncer: LiveAnnouncer) { }
 
   /*
  'ngAfterViewInit()' é o gancho de ciclo de vida apropriado para garantir que o campo de senha receba o foco. Neste ponto, a visualização já foi inicializada,
@@ -53,6 +56,7 @@ export class ListaLivrosComponent implements AfterViewInit {
     }),
     tap((resultado) => {
       this.livrosResultado = resultado;
+      this.liveAnnouncer.announce(`${this.livrosResultado.totalItems} resultados encontrados`)
     }),
     map((resultado) => resultado.items ?? []),
     map((items) => this.livrosResultadoParaLivros(items)),
