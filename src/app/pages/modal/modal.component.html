@@ -41,10 +41,9 @@
       <p class="resultado">{{ livro.description | slice : 0 : 1000 }}</p>
     </section>
   </article>
-  <div class="overlay"></div>
+  <div class="overlay" (click)="fecharModal()"></div>
 </dialog>
 
 <!--
 Ao combinar a diretiva cdkTrapFocus com a opção cdkTrapFocusAutoCapture="true", o foco é automaticamente capturado e mantido dentro do modal, melhorando a experiência de navegação.
-
 -->
