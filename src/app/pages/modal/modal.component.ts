@@ -1,9 +1,11 @@
 import {
   Component,
+  ElementRef,
   EventEmitter,
   HostListener,
   Input,
   Output,
+  Renderer2,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -22,7 +24,10 @@ export class ModalComponent {
   statusModal: boolean = true;
   @Output() mudouModal = new EventEmitter<boolean>()
 
-  constructor() {}
+  constructor(
+    private renderer: Renderer2,
+    private element: ElementRef
+  ) {}
 /*
 @HostListener é um decorator essencial para ouvir eventos no elemento hospedeiro (host) de um componente ou diretiva.
 Seu uso permite uma abordagem limpa e Angular-friendly para lidar com eventos, integrando-se perfeitamente ao ciclo de vida do componente.
@@ -36,6 +41,7 @@ Seu uso permite uma abordagem limpa e Angular-friendly para lidar com eventos, i
   fecharModal() {
     this.statusModal = false
     this.mudouModal.emit(this.statusModal)
+    this.renderer.setStyle(this.element.nativeElement.ownerDocument.body, 'overflow', 'scroll')
   }
 
   lerPrevia() {
