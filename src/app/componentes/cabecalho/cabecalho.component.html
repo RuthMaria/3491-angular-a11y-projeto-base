@@ -4,16 +4,30 @@
     routerLink="/lista-livros"
     routerLinkActive="active-page"
     ariaCurrentWhenActive="page"
+    aria-label="Página inicial"
   >
     <img src="assets/imagens/logo.png" alt="Logo da aplicação Buscante" />
   </a>
   <nav>
-    <a routerLink="/sobre" routerLinkActive="active-page"> Sobre </a>
-    <a routerLink="/contato" routerLinkActive="active-page"> Contato </a>
+    <a
+      routerLink="/sobre"
+      routerLinkActive="active-page"
+      aria-label="Mais informações sobre o Buscante"
+    >
+      Sobre
+    </a>
+    <a
+      routerLink="/contato"
+      routerLinkActive="active-page"
+      aria-label="Entre em contato"
+    >
+      Contato
+    </a>
   </nav>
 </header>
 
 <!--
     'routerLinkActive' identifica a rota ativa e aplica o estilo definido na classe 'active-page'
     'ariaCurrentWhenActive' usado para deficientes visuais identificar qual rota está ativa
+    'aria-label' serve para o leitor de tela descrever o que está sendo visto na tag especificada, dar mais detalhes
   -->

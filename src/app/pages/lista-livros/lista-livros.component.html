@@ -3,6 +3,7 @@
     <label for="campoBusca">Que livro você procura?</label>
     <div class="input-wrapper">
       <input
+        aria-label="Campo de busca"
         #campoBuscaElement
         type="search"
         id="campoBusca"
@@ -13,14 +14,14 @@
   </form>
   <p>Busque por assunto, autoria, nome...</p>
   @if (mensagemErro) {
-  <section class="resultados mensagem-erro">
+  <section aria-label="Mensagem de erro" class="resultados mensagem-erro">
     {{ mensagemErro }}
   </section>
   } @if (livrosEncontrados$ | async; as listaLivros) {
-  <section class="resultados">
+  <section aria-label="Resultados da busca" class="resultados">
     {{ livrosResultado.totalItems }} resultados encontrados
   </section>
-  <ul class="container-card">
+  <ul aria-label="Lista de livros encontrados" class="container-card">
     @for (livro of listaLivros; track livro.title) {
     <li>
       <app-livro [livro]="livro"></app-livro>
@@ -28,7 +29,7 @@
     }
   </ul>
   } @else {
-  <section class="imagens">
+  <section aria-label="Página inicial" class="imagens">
     <h1 class="titulo">
       Busque o livro <br />
       que quiser na <br />
