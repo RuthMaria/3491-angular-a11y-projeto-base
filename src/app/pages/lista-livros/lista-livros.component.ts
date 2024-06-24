@@ -1,5 +1,5 @@
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EMPTY, catchError, debounceTime, distinctUntilChanged, filter, map, switchMap, tap, throwError } from 'rxjs';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -24,12 +24,21 @@ const PAUSA = 300;
   templateUrl: './lista-livros.component.html',
   styleUrl: './lista-livros.component.css'
 })
-export class ListaLivrosComponent {
+export class ListaLivrosComponent implements AfterViewInit {
   campoBusca = new FormControl();
   mensagemErro = ''
   livrosResultado!: LivrosResultado;
+  @ViewChild('campoBuscaElement') campoBuscaElement!: ElementRef; // criamos uma referência ao elemento do DOM para podermos aplicar o foco
 
   constructor(private service: LivroService) { }
+
+  /*
+ 'ngAfterViewInit()' é o gancho de ciclo de vida apropriado para garantir que o campo de senha receba o foco. Neste ponto, a visualização já foi inicializada,
+ tornando-o ideal para ações que requerem manipulação do DOM após a renderização inicial do componente.
+ */
+  ngAfterViewInit() {
+    this.campoBuscaElement.nativeElement.focus()
+  }
 
   livrosEncontrados$ = this.campoBusca.valueChanges.pipe(
     debounceTime(PAUSA),
