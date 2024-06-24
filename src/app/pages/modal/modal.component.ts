@@ -7,11 +7,12 @@ import {
 import { CommonModule } from '@angular/common';
 
 import { Livro } from '../../models/interfaces';
+import { A11yModule } from '@angular/cdk/a11y'
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, A11yModule],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css'
 })

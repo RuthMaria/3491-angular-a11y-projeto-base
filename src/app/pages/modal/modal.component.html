@@ -1,4 +1,9 @@
-<dialog [open]="statusModal" class="container">
+<dialog
+  cdkTrapFocus
+  cdkTrapFocusAutoCapture="true"
+  [open]="statusModal"
+  class="container"
+>
   <article class="card">
     <img
       class="imagem"
@@ -21,6 +26,7 @@
         >
           Ler prévia
         </button>
+        <button class="detalhes">Comprar livro</button>
       </div>
     </section>
     <button
@@ -37,3 +43,8 @@
   </article>
   <div class="overlay"></div>
 </dialog>
+
+<!--
+Ao combinar a diretiva cdkTrapFocus com a opção cdkTrapFocusAutoCapture="true", o foco é automaticamente capturado e mantido dentro do modal, melhorando a experiência de navegação.
+
+-->

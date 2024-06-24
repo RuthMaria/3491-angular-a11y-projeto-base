@@ -17,54 +17,54 @@
 }
 
 .titulo {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
-  color: #6C63FF;
+  color: #6c63ff;
   padding-top: 16px;
 }
 
 .informacoes {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: #8B8B8B;
+  color: #8b8b8b;
   padding-bottom: 4px;
 }
 
 .resultado {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #8B8B8B;
+  color: #8b8b8b;
   padding-bottom: 8px;
-  text-align:justify;
+  text-align: justify;
 }
 
 .detalhes {
-  background: #6C63FF;
-  width: 9rem;
+  background: #6c63ff;
+  min-width: 9rem;
   height: 2.5rem;
   border-radius: 8px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   cursor: pointer;
   margin-right: 8px;
 }
 
 .info-card {
-  background: #FFFFFF;
+  background: #ffffff;
   width: 12rem;
   padding-left: 1.5rem;
   grid-area: info-card;
@@ -116,7 +116,5 @@
 }
 
 .detalhes:hover {
-  background: #050C42;
+  background: #050c42;
 }
-
-
