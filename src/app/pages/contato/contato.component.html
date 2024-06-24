@@ -137,6 +137,7 @@
         Cancelar
       </button>
       <button
+        [attr.aria-disabled]="contatoForm.invalid"
         type="submit"
         [disabled]="contatoForm.invalid"
         class="botao-enviar"
@@ -152,4 +153,7 @@
   melhorando a experiência de pessoas que dependem de tecnologias assistivas.
 
   'aria-describedby' recebe o id do elemento ao qual ele vai descrever
+
+  'aria-disabled' é empregado para vincular dinamicamente valores a atributos ARIA, indicando se um botão está habilitado ou desabilitado com base em condições específicas,
+  proporcionando informações explícitas para pessoas que utilizam de leitores de tela.
 -->

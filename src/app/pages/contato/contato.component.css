@@ -22,7 +22,7 @@
 
 .cabecalho-contato-texto p {
   font-size: 18px;
-  color: #8B8B8B;
+  color: #8b8b8b;
 }
 
 h2 {
@@ -34,7 +34,7 @@ h2 {
   border: none;
   padding: 20px;
   border-radius: 10px;
-  background-color: #EFF2F1;
+  background-color: #eff2f1;
 }
 
 fieldset {
@@ -66,12 +66,12 @@ fieldset {
 .campo-form textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid #6C63FF;
+  border: 1px solid #6c63ff;
   border-radius: 5px;
   box-sizing: border-box;
 }
 
- .radio-button {
+.radio-button {
   list-style-type: none;
   display: flex;
   gap: 24px;
@@ -80,23 +80,26 @@ fieldset {
   line-height: 24px;
   letter-spacing: 0em;
   text-align: left;
-  color: #8B8B8B;
+  color: #8b8b8b;
 }
 
 .radio-button input[type="radio"] {
   margin-right: 8px;
 }
 
-textarea:focus, input:focus, select:focus{
+textarea:focus,
+input:focus,
+select:focus {
   outline: none;
 }
 
 select option:disabled {
-  color: #5D586C;
+  color: #5d586c;
   cursor: not-allowed;
 }
 
-input::placeholder, textarea::placeholder{
+input::placeholder,
+textarea::placeholder {
   font-size: 16px;
   font-family: Poppins;
   padding-left: 8px;
@@ -129,17 +132,17 @@ input::placeholder, textarea::placeholder{
 }
 
 .formulario .botao-cancelar {
-  color: #6C63FF;
-  border: 2px solid #6C63FF;
+  color: #6c63ff;
+  border: 2px solid #6c63ff;
 }
 
 .formulario .botao-enviar {
-  background: #6C63FF;
+  background: #6c63ff;
   color: white;
 }
 
 .formulario button:hover {
-  background: #050C42;
+  background: #050c42;
   transition: all 0.5s ease-in;
 }
 
@@ -166,11 +169,8 @@ input::placeholder, textarea::placeholder{
   border: 1px solid red;
 }
 
-.contato-botoes .botao-enviar:disabled {
+.contato-botoes .botao-enviar[aria-disabled] {
   background-color: #ccc;
   color: #666;
   cursor: not-allowed;
 }
-
-
-
