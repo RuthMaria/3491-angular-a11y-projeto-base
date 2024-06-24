@@ -3,7 +3,7 @@
     src="{{ livro.thumbnail || 'assets/imagens/capa-indisponivel.png' }}"
     alt="Capa do livro"
   />
-  <section aria-label="Detalhes do livro" class="info-card">
+  <section role="region" aria-label="Detalhes do livro" class="info-card">
     <h2 [attr.aria-label]="'Título do livro' + livro.title">
       {{ livro.title | slice : 0 : 30 }}
     </h2>
@@ -25,3 +25,8 @@
   <app-modal [livro]="livro" (mudouModal)="onModalChange($event)"></app-modal>
 </ng-container>
 }
+
+<!--
+  O atributo role no HTML desempenha um papel vital na estrutura semântica das páginas, fornecendo informações essenciais sobre o propósito de cada elemento.
+  Role pode assumir diferentes valores a depender do que se deseja transmitir, mais detalhes em <https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques>
+-->
