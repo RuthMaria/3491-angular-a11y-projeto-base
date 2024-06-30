@@ -35,6 +35,8 @@ O Buscante é uma aplicação que permite pesquisar e descobrir livros utilizand
 
 O curso visa implementar estratégias de acessibilidade para tornar o Buscante uma aplicação mais inclusiva e acessível.
 
+<a id="technologies"></a><br>
+
 ## ⚒️ Tecnologias usadas
 
 - HTML
