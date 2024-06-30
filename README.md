@@ -1,41 +1,86 @@
 ![Buscante](thumbnail.png)
 
-# Buscante
+<p align="center">
+  <a href="#about">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;  
+  <a href="#technologies">Tecnologias usadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;
+  <a href="#preview">Prévia</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rodar">Como rodar os testes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">Licença</a>
+</p>
 
-Aplicação que permite pesquisar e descobrir livros utilizando a API do Google Books. 
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=04d361&labelColor=000000" alt="PRs welcome!" />
 
-## 🔨 Funcionalidades do projeto
+  <img alt="License" src="https://img.shields.io/badge/Made%20by-Ruth%20Maria-%2304D361">
 
-### Pesquisa de Livros:
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=04d361&labelColor=000000">
+</p>
 
-As pessoas podem inserir palavras-chave na barra de pesquisa para buscar livros de forma dinâmica.
+<a id="about"></a>
 
-### Detalhes do Livro:
+## :books: Sobre
 
-Ao clicar em um livro específico pode-se obter mais detalhes, como título, sinopse, autoria e outras informações fornecidas pela API do Google Books.
+O Buscante é uma aplicação que permite pesquisar e descobrir livros utilizando a API do Google Books. Onde é possivel:
 
-### Link para ler prévia do livro:
+- Pesquisar Livros
 
-Link com opção de ler uma prévia do livro.
+  - As pessoas podem inserir palavras-chave na barra de pesquisa para buscar livros de forma dinâmica.
 
-## ✔️ Técnicas e tecnologias utilizadas
+- Ver detalhes do Livro
 
-As técnicas e tecnologias utilizadas foram:
+  - Ao clicar em um livro específico pode-se obter mais detalhes, como título, sinopse, autoria e outras informações fornecidas pela API do Google Books.
 
-- `Angular`
-- `Google Books API`
-- `RxJs`
-
-## 📁 Acesso ao projeto
-
-Você pode [acessar o código fonte do projeto inicial](https://github.com/nayannelbatista/3491-angular-a11y) ou [baixá-lo](https://github.com/nayannelbatista/3491-angular-a11y/archive/refs/heads/projeto-base.zip).
-
-## 🛠️ Abrir e rodar o projeto
-
-Para abrir e rodar o projeto, execute *npm i* para instalar as dependências e *ng serve* para iniciar o projeto.
-
-Depois, acesse [http://localhost:4200/](url) no seu navegador. 
-
-## 📚 Mais informações do curso
+- Link para ler prévia do livro
+  - Link com opção de ler uma prévia do livro.
 
 O curso visa implementar estratégias de acessibilidade para tornar o Buscante uma aplicação mais inclusiva e acessível.
+
+## ⚒️ Tecnologias usadas
+
+- HTML
+- CSS
+- RxJs
+- Angular
+- Typescript
+- Google Books API
+- Angular Material
+
+<a id="preview"></a><br>
+
+## :tv: Prévia
+
+![video](./src/assets/videos/video.gif)
+
+<a id="rodar"></a><br>
+
+## 🚀 Como rodar os testes
+
+- Clonar este repositório
+
+```
+git clone https://github.com/RuthMaria/3491-angular-a11y-projeto-base.git
+```
+
+- Instalar as dependêncies
+
+```
+npm install
+```
+
+- Rodar o projeto
+
+```
+npm run start
+```
+
+<a id="license"></a><br>
+
+## :memo: Licença
+
+Este projeto está sob licença do MIT. Consulte o arquivo [LICENSE](LICENSE.md) para obter mais detalhes.
+
+---
+
+<h4 align="center">
+    Desenvolvido com ❤️ por <a href="https://www.linkedin.com/in/ruth-maria-9b256071/" target="_blank">Ruth Maria</a>
+</h4>
